@@ -79,7 +79,7 @@ function writeToFile(filename, data) {
         if (error) {
             console.error(error);
         } else {
-            console.log('success');
+            console.log('SUCCESS!');
         }
     });
 }
@@ -90,7 +90,7 @@ const init = () => {
     .then((data) => {
         writeToFile('README.md',generateMarkdown(data))
     })
-    .then(() => console.log('ReadMe file created'))
+    .then(() => console.log('ReadMe file created!'))
     .catch((err) => {
         console.log(err)
     });

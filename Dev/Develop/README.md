@@ -1,5 +1,5 @@
-# fun
-  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)]
+# FunStuff
+  [![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)]
 
   ##  Table of Contents
   - [Installation](#installation)
@@ -8,31 +8,31 @@
   - [License](#license)
 
   ## About the Project
-  fun stuff
-  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)]
+  Just fun stuff
+  [![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)]
 
   ## Installation
-  n/a
+  Clone project
 
   ## Usage
-  n/a
+  will be updated soon 
 
   ## Credits
-  n/a
+  
 
   ## License
-  This app is licensed under the The MIT License licensing.
-  For more information about the license, click [here]((https://opensource.org/licenses/MIT))
+  This app is licensed under the Mozilla Public License 2.0 licensing.
+  For more information about the license, click [here]((https://opensource.org/licenses/MPL-2.0))
 
   ## How to Contribute
-  n/a
+  
 
   ## Tests
  
-  n/a
+  
 
   ## Questions
   Any questions, please contact or visit:
-  - Email: willie@yahoo.com
+  - Email: willie@gmail.com
   - Username: liiv-dev
   - Github: liiv-dev.io
