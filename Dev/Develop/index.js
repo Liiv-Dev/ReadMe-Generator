@@ -56,7 +56,7 @@ const isValidEmail = (email) => {
         message: 'List your collaborators, if any, with links to their GitHub profiles'
     },
     {
-        type: 'list-input',
+        type: 'list',
         name: 'license',
         message: 'Select licenses used to create your project',
         choices: ['Apache 2.0 License', 'Boost Software License 1.0', 'BSD 3-Clause License', 'CC0', 'Eclipse Public License 1.0', 'IBM Public License Version 1.0', 'ISC License (ISC)', 'The MIT License', 'Mozilla Public License 2.0', 'The Perl License']
@@ -73,11 +73,28 @@ const isValidEmail = (email) => {
     },
 ]
 
-// TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+// Function to write README file
+function writeToFile(filename, data) {
+    fs.writeFile(filename, data, (error) => {
+        if (error) {
+            console.error(error);
+        } else {
+            console.log('success');
+        }
+    });
+}
 
-// TODO: Create a function to initialize app
-function init() {}
+// Function to initialize app
+const init = () => {
+    inquirer.prompt(questions)
+    .then((data) => {
+        writeToFile('README.md',generateMarkdown(data))
+    })
+    .then(() => console.log('ReadMe file created'))
+    .catch((err) => {
+        console.log(err)
+    });
+}
 
 // Function call to initialize app
 init();

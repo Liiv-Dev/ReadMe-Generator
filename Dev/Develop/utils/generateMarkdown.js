@@ -3,34 +3,34 @@
 function renderLicenseBadge(license) {
   switch(license) {
     case `Apache 2.0 License` :
-      badge = `[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)]`
+      return `[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)]`
       break;
       case `Boost Software License 1.0` :
-        badge = `[![License](https://img.shields.io/badge/License-Boost_1.0-lightblue.svg)]`
+        return `[![License](https://img.shields.io/badge/License-Boost_1.0-lightblue.svg)]`
       break;
       case `BSD 3-Clause License` :
-        badge = `[![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)]`
+        return`[![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)]`
       break;
       case `CC0` :
-        badge = `[![License: CC0-1.0](https://licensebuttons.net/l/zero/1.0/80x15.png)]`
+        return `[![License: CC0-1.0](https://licensebuttons.net/l/zero/1.0/80x15.png)]`
       break;
       case `Eclipse Public License 1.0` :
-        badge = `[![License](https://img.shields.io/badge/License-EPL_1.0-red.svg)](https://opensource.org/licenses/EPL-1.0)`
+        return `[![License](https://img.shields.io/badge/License-EPL_1.0-red.svg)]`
       break;
       case `IBM Public License Version 1.0` :
-        badge = `[![License: IPL 1.0](https://img.shields.io/badge/License-IPL_1.0-blue.svg)]`
+        return `[![License: IPL 1.0](https://img.shields.io/badge/License-IPL_1.0-blue.svg)])`
       break;
       case `ISC License (ISC)` :
-        badge = `[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)`
+        return `[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)]`
       break;
       case `The MIT License` :
-        badge = `[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)]`
+        return `[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)]`
       break;
       case `Mozilla Public License 2.0` :
-        badge = `[![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)]`
+        return `[![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)]`
       break;
       case `The Perl License` :
-        badge = `[![License: Artistic-2.0](https://img.shields.io/badge/License-Perl-0298c3.svg)]`
+        return `[![License: Artistic-2.0](https://img.shields.io/badge/License-Perl-0298c3.svg)]`
       break;
       default:
         return ''
@@ -40,34 +40,92 @@ function renderLicenseBadge(license) {
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
-function renderLicenseLink(license) {}
+const renderLicenseLink = license => {
+  switch(license) {
+    case `Apache 2.0 License` :
+      return `(https://opensource.org/licenses/Apache-2.0)
+
+      `
+      break;
+      case `Boost Software License 1.0` :
+        return `(https://www.boost.org/LICENSE_1_0.txt)`
+      break;
+      case `BSD 3-Clause License` :
+        return`(https://opensource.org/licenses/BSD-3-Clause)`
+      break;
+      case `CC0` :
+        return `(http://creativecommons.org/publicdomain/zero/1.0/)`
+      break;
+      case `Eclipse Public License 1.0` :
+        return `(https://opensource.org/licenses/EPL-1.0)`
+      break;
+      case `IBM Public License Version 1.0` :
+        return `(https://opensource.org/licenses/IPL-1.0)`
+      break;
+      case `ISC License (ISC)` :
+        return `(https://opensource.org/licenses/ISC)`
+      break;
+      case `The MIT License` :
+        return `(https://opensource.org/licenses/MIT)`
+      break;
+      case `Mozilla Public License 2.0` :
+        return `(https://opensource.org/licenses/MPL-2.0)`
+      break;
+      case `The Perl License` :
+        return `(https://opensource.org/licenses/Artistic-2.0)`
+      break;
+      default:
+        return ''
+        break
+  }
+}
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
-function renderLicenseSection(license) {}
+const renderLicenseSection =license => {
+  return `This app is licensed under the ${license} licensing.`
+}
 
 // Function to generate markdown for README
-function generateMarkdown(data) {
-  return 
-  `# ${data.title} \n
+const generateMarkdown = data => {
+  
+  return `# ${data.title}
+  ${renderLicenseBadge(data.license)}
 
-  ## About the Project \n ${data.description} \n
+  ##  Table of Contents
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [Credits](#credits)
+  - [License](#license)
 
-  ##  Table of Contents \n ${data.install} \n ${data.usage} \n ${data.credits} \n ${data.license}
+  ## About the Project
+  ${data.description}
+  ${renderLicenseBadge(data.license)}
 
-  ## Installation \n ${data.install} \n
+  ## Installation
+  ${data.install}
 
-  ## Usage \n ${data.usage} \n
+  ## Usage
+  ${data.usage}
 
-  ## Credits \n ${data.credits} \n
+  ## Credits
+  ${data.credits}
 
-  ## Licenses \n ${data.license} \n
+  ## License
+  ${renderLicenseSection(data.license)}
+  For more information about the license, click [here](${renderLicenseLink(data.license)})
 
-  ## How to Contribute \n ${data.contribute} \n
+  ## How to Contribute
+  ${data.contribute}
 
-  ## Tests \n ${data.tests} \n
+  ## Tests\n 
+  ${data.tests}
 
-  ## Questions \n Email: ${data.email} Username: ${data.username} Github: ${data.github}
+  ## Questions
+  Any questions, please contact or visit:
+  - Email: ${data.email}
+  - Username: ${data.username}
+  - Github: ${data.github}
 `;
 }
 
