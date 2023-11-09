@@ -1,15 +1,15 @@
-// TODO: Include packages needed for this application
+// Added packages needed for this application
 const generateMarkdown = require('./utils/generateMarkdown')
 const inquirer = require('inquirer')
 const fs = require('fs')
 
 const isValidEmail = (email) => {
-    // Regular expression for basic email validation
+    // Email validation
     const emailChar = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailChar.test(email);
 };
 
-// TODO: Create an array of questions for user input
+// Array of questions for user input
  const questions = [
     {
         type: 'input',
@@ -70,11 +70,6 @@ const isValidEmail = (email) => {
         type: 'input',
         name: 'tests',
         message: 'Write tests for your application, Then provide examples on how to run them here'
-    },
-    {
-        type: 'input',
-        name: 'questions',
-        message: 'List your collaborators, if any, with links to their GitHub profiles'
     },
 ]
 
