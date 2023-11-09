@@ -43,36 +43,36 @@ function renderLicenseBadge(license) {
 const renderLicenseLink = license => {
   switch(license) {
     case `Apache 2.0 License` :
-      return `(https://opensource.org/licenses/Apache-2.0)
+      return `For more information about licensing, click [here] (https://opensource.org/licenses/Apache-2.0)
 
       `
       break;
       case `Boost Software License 1.0` :
-        return `(https://www.boost.org/LICENSE_1_0.txt)`
+        return `For more information about licensing, click [here] (https://www.boost.org/LICENSE_1_0.txt)`
       break;
       case `BSD 3-Clause License` :
-        return`(https://opensource.org/licenses/BSD-3-Clause)`
+        return`For more information about licensing, click [here] (https://opensource.org/licenses/BSD-3-Clause)`
       break;
       case `CC0` :
-        return `(http://creativecommons.org/publicdomain/zero/1.0/)`
+        return ` For more information about licensing, click [here] (http://creativecommons.org/publicdomain/zero/1.0/)`
       break;
       case `Eclipse Public License 1.0` :
-        return `(https://opensource.org/licenses/EPL-1.0)`
+        return ` For more information about licensing, click [here] (https://opensource.org/licenses/EPL-1.0)`
       break;
       case `IBM Public License Version 1.0` :
-        return `(https://opensource.org/licenses/IPL-1.0)`
+        return `For more information about licensing, click [here] (https://opensource.org/licenses/IPL-1.0)`
       break;
       case `ISC License (ISC)` :
-        return `(https://opensource.org/licenses/ISC)`
+        return `For more information about licensing, click [here] (https://opensource.org/licenses/ISC)`
       break;
       case `The MIT License` :
-        return `(https://opensource.org/licenses/MIT)`
+        return `For more information about licensing, click [here] (https://opensource.org/licenses/MIT)`
       break;
       case `Mozilla Public License 2.0` :
-        return `(https://opensource.org/licenses/MPL-2.0)`
+        return `For more information about licensing, click [here] (https://opensource.org/licenses/MPL-2.0)`
       break;
       case `The Perl License` :
-        return `(https://opensource.org/licenses/Artistic-2.0)`
+        return `For more information about licensing, click [here] (https://opensource.org/licenses/Artistic-2.0)`
       break;
       default:
         return ''
@@ -82,13 +82,17 @@ const renderLicenseLink = license => {
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
-const renderLicenseSection =license => {
-  return `This app is licensed under the ${license} licensing.`
-}
+const renderLicenseSection = license => {
+  if(license) {
+   return `Application is licensed by ${license}.`
+  } else {
+    return ''
+  }
+};
 
 // Function to generate markdown for README
 const generateMarkdown = data => {
-  
+
   return `# ${data.title}
   ${renderLicenseBadge(data.license)}
 
@@ -113,12 +117,12 @@ const generateMarkdown = data => {
 
   ## License
   ${renderLicenseSection(data.license)}
-  For more information about the license, click [here](${renderLicenseLink(data.license)})
+  ${renderLicenseLink(data.license)}
 
   ## How to Contribute
   ${data.contribute}
 
-  ## Tests\n 
+  ## Tests
   ${data.tests}
 
   ## Questions

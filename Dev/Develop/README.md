@@ -1,5 +1,5 @@
-# FunStuff
-  [![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)]
+# STUFF
+  
 
   ##  Table of Contents
   - [Installation](#installation)
@@ -8,31 +8,30 @@
   - [License](#license)
 
   ## About the Project
-  Just fun stuff
-  [![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)]
+  STUFF
+  
 
   ## Installation
-  Clone project
+  STUFF
 
   ## Usage
-  will be updated soon 
+  STUFF
 
   ## Credits
-  
+  ME
 
   ## License
-  This app is licensed under the Mozilla Public License 2.0 licensing.
-  For more information about the license, click [here]((https://opensource.org/licenses/MPL-2.0))
+  
+  
 
   ## How to Contribute
-  
+  STUFF
 
   ## Tests
- 
-  
+  STUFF
 
   ## Questions
   Any questions, please contact or visit:
-  - Email: willie@gmail.com
-  - Username: liiv-dev
-  - Github: liiv-dev.io
+  - Email: willie@yahoo.com
+  - Username: liiv
+  - Github: liiv.io

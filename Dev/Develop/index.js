@@ -59,7 +59,7 @@ const isValidEmail = (email) => {
         type: 'list',
         name: 'license',
         message: 'Select licenses used to create your project',
-        choices: ['Apache 2.0 License', 'Boost Software License 1.0', 'BSD 3-Clause License', 'CC0', 'Eclipse Public License 1.0', 'IBM Public License Version 1.0', 'ISC License (ISC)', 'The MIT License', 'Mozilla Public License 2.0', 'The Perl License']
+        choices: ['','Apache 2.0 License', 'Boost Software License 1.0', 'BSD 3-Clause License', 'CC0', 'Eclipse Public License 1.0', 'IBM Public License Version 1.0', 'ISC License (ISC)', 'The MIT License', 'Mozilla Public License 2.0', 'The Perl License']
     },
     {
         type: 'input',
