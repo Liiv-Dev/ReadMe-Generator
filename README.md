@@ -17,7 +17,7 @@ Clone repo and run node.js
 
 ## Usage
 
-Answers quesstions from prompt, and js will do the rest. 
+Answers questions from prompt, and js will do the rest. 
 
 ## Credits
 
