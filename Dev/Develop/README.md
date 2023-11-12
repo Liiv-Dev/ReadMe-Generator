@@ -1,5 +1,5 @@
-# STUFF
-  
+# TurkeyStuffing
+  [![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)]
 
   ##  Table of Contents
   - [Installation](#installation)
@@ -8,30 +8,30 @@
   - [License](#license)
 
   ## About the Project
-  STUFF
-  
+  just turkey stuff
+  [![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)]
 
   ## Installation
-  STUFF
+  download turkey package 
 
   ## Usage
-  STUFF
+  none
 
   ## Credits
-  ME
+  turkey family 
 
   ## License
-  
-  
+  Application is licensed by Mozilla Public License 2.0.
+  For more information about licensing, click [here] (https://opensource.org/licenses/MPL-2.0)
 
   ## How to Contribute
-  STUFF
+  call turkeys ....
 
   ## Tests
-  STUFF
+  ...
 
   ## Questions
   Any questions, please contact or visit:
-  - Email: willie@yahoo.com
-  - Username: liiv
-  - Github: liiv.io
+  - Email: stuff@gmail.com
+  - Username: turkeyStuff
+  - Github: turkeyStuff.io

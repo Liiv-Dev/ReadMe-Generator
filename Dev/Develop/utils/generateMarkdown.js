@@ -18,7 +18,7 @@ function renderLicenseBadge(license) {
         return `[![License](https://img.shields.io/badge/License-EPL_1.0-red.svg)]`
       break;
       case `IBM Public License Version 1.0` :
-        return `[![License: IPL 1.0](https://img.shields.io/badge/License-IPL_1.0-blue.svg)])`
+        return `[![License: IPL 1.0](https://img.shields.io/badge/License-IPL_1.0-blue.svg)]`
       break;
       case `ISC License (ISC)` :
         return `[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)]`
